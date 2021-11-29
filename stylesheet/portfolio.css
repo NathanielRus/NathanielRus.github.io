@@ -200,7 +200,7 @@ footer {
     float: left;
     width: 50%; 
     padding: 10px;
-    padding-top: 3%; 
+    padding-top: 1%; 
     height: 400px; 
     background-color: #789674; 
 }
@@ -216,14 +216,14 @@ footer {
     float: left;
     width: 50%;
     padding: 10px;
-    padding-top: 1.9%;
+    padding-top: 1%;
     height: 400px;
-    background-color: #264577;
+    background-color: #364e74;
 }
 
 /* This class is applied to the columns in the final row, overriding the height and padding to provide more room for the contact form  while keeping the rest of the formatting from Column_1 or Column_2 */
 .Column_tall {
-    padding-top: 3.5%;
+    padding-top: 1.5%;
     height: 450px;
 }
 
@@ -243,7 +243,7 @@ input[type=text] {
     border-radius: 4px; 
     box-sizing: border-box; 
     margin-top: 6px; 
-    margin-bottom: 16px; 
+    margin-bottom: 10px; 
     resize: vertical; 
     font-family: Perpetua, Rockwell Extra Bold;
 }
