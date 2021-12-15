@@ -1,7 +1,19 @@
 /***** GENERAL STYLING *****/
+html {
+    background-color: #0e387a;
+    scroll-behavior: smooth;
+}
+
 /* Body */
 body {
-    margin: 0% 
+    opacity: 1;
+    transition: 1s opacity;
+    margin: 0%;
+}
+
+body.fade-out {
+    opacity: 0;
+    transition: none;
 }
 
 /* Heading 1 elements */
@@ -201,7 +213,7 @@ footer {
     width: 50%; 
     padding: 10px;
     padding-top: 1%; 
-    height: 400px; 
+    height: 500px; 
     background-color: #789674; 
 }
 
@@ -216,15 +228,15 @@ footer {
     float: left;
     width: 50%;
     padding: 10px;
-    padding-top: 1%;
-    height: 400px;
+    padding-top: 3%;
+    height: 500px;
     background-color: #364e74;
 }
 
 /* This class is applied to the columns in the final row, overriding the height and padding to provide more room for the contact form  while keeping the rest of the formatting from Column_1 or Column_2 */
 .Column_tall {
-    padding-top: 1.5%;
-    height: 450px;
+    padding-top: 1%;
+    height: 500px;
 }
 
 /* This inserts something after the content of selected elements (in this case the elements with class "Row") */
@@ -277,10 +289,75 @@ input[type=submit]:hover {
 }
 
 /* Form element */
-form {
-    border-radius: 5px; 
+form { 
     background-color: #789674; 
     padding: 5px; 
     font-family: "Trebuchet MS", Optima;
 }
 /***** END OF CONTACT FORM STYLING *****/
+
+/* POPUP FORM */
+
+.open-button {
+    word-break: break-all;
+    white-space: pre-wrap;
+    background-color: #817496;
+    color: white;
+    padding: 5px 5px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    position: fixed;
+    bottom: 150px;
+    right: 3px;
+    height: 175px;
+    width: 25px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.form-popup {
+    display: none;
+    position: fixed;
+    bottom: 5px;
+    right: 15px;
+    border: 3px solid #817496;
+    z-index: 9;
+}
+
+.form-container {
+    max-width: 300px;
+    padding: 10px;
+    background-color: #364e74;
+}
+
+.form-container input[type=text] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+}
+
+.form-container input[type=text] {
+    background-color: #ddd;
+    outline: none;
+}
+
+.form-container .btn {
+    background-color: #53914b;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.8;
+}
+
+.form-container .btn-close {
+    background-color: #914b4b;
+}
+
+.form-container .btn:hover, .open-button:hover {
+    opacity: 1;
+}

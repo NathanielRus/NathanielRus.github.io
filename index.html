@@ -3,13 +3,18 @@
     <!--Head-->
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Nathaniel Russell</title>
+        <link rel="shortcut icon" href="Favicon/favicon.ico" type="image/x-icon">
         <link rel="stylesheet" type="text/css" href="stylesheet/portfolio.css">
     </head>
 
     <!--Body-->
     <body class="Background">
+        <div class="moveA"></div>
+        <script>
+            document.body.classList.add('fade-out');
+        </script>
 
         <!--Navbar-->
         <div class="Navbar">
@@ -34,9 +39,9 @@
 
         <!--Video text-->
         <div class="Video_Text">
-            <h1 class="white-text">Nathaniel Russell's Portfolio</h1>
+            <h1 class="white-text" style="font-size:2vw;">Nathaniel Russell's Portfolio</h1>
             <strong>
-                <p class="center">
+                <p class="center" style="font-size:1vw;">
                     <q>In some ways, programming is like painting. You start with a blank
                         <br>canvas and certain basic raw materials. You use a combination of
                         <br>science, art, and craft to determine what to do with them.
@@ -50,6 +55,26 @@
             </strong>
         </div>
 
+        <!--Popup Contact-->
+        <button class="open-button" onclick="openForm()">CONTACTME</button>
+        <div class="form-popup" id="popForm">
+            <form action="https://formspree.io/f/mdobnlpr" class="form-container" onsubmit="return validateForm()" method="POST">
+                <h1>Contact Me:</h1>
+
+                <label>Name:</label>
+                    <input type="text" id="Name" name="Name" placeholder="Please enter your name here">
+                <label>Phone #:</label>
+                    <input type="text" id="Phone#" name="Phone#" placeholder="Please enter your phone number here">
+                <label>Email:</label>
+                    <input type="text" id="Email" name="Email" placeholder="Please enter your email here">
+                <label>Message:</label>
+                    <input type="text" id="Message" name="Message" placeholder="Please write your message here">
+
+                <button type="submit" class="btn">Sumbit</button>
+                <button type="button" class="btn-close" onclick="closeForm()">Close</button>
+            </form>
+        </div>
+
         <!--About section-->
         <div class="Row" id="About">
             <!--Left column-->
@@ -58,7 +83,7 @@
             </div>
             <!--Right column-->
             <div class="Column_1">
-                <h1>About</h1>
+                <h1>About:</h1>
                 <p>
                     I am learning to be a game developer. I am 26 and have always dreamed of coding. I have put my dreams into action by working through this boot camp! I was working at the Transportion Security Administration for almost 5 years. I then decided that I wanted to pursue a programming career.
                     <br>I am a student of <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a>’s Game Developer Boot Camp. I am trained in the following web and programming languages: HTML and CSS. 
@@ -75,7 +100,7 @@
         <div class="Row" id="GitHub">
             <!--Left column-->
             <div class="Column_1">
-                <h1>GitHub</h1>
+                <h1>GitHub:</h1>
                 <p>
                     You can view my coding projects on my GitHub profile here:
                     <br>
@@ -91,18 +116,20 @@
         </div>
 
         <!--Contact section-->
-        <div class="Row" id="Contact">
+        <div class="Row">
             <!--Contact image, left column-->
-            <div class="Column_2 Column_tall">
+            <div class="Column_2">
                 <img src="./images/email.jpg" alt="Contact_Email">
             </div>
             <!--Contact form, right column-->
             <div class="Column_1 Column_tall">
-                <h1>Contact</h1>
+                <h1>Contact Me:</h1>
                 <!--This specifies where and how to send the form data-->
-                <form action="https://formspree.io/f/mdobnlpr" method="POST">
+                <form name="contactForm" action="https://formspree.io/f/mdobnlpr" onsubmit="return validateForm()" method="POST">
                     <label>Name:</label>
-                        <input type="text" placeholder="Please enter your name here">
+                        <input type="text" id="Name" name="Name" placeholder="Please enter your name here">
+                    <label>Phone #:</label>
+                        <input type="text" id="Phone#" name="Phone#" placeholder="Please enter your phone number here">
                     <label>Email:</label>
                         <input type="text" id="Email" name="Email" placeholder="Please enter your email here">
                     <label>Message:</label>
@@ -113,11 +140,12 @@
         </div>
 
         <!--Footer section-->
-        <footer>
+        <footer id="Contact">
             <p>
                 <p class="center">If you would like to learn coding also. Let me refer you to.<a href="https://www.learncodinganywhere.com/" target="_blank"> The Tech Academy</a></p>
                 <br>
             </p>
         </footer>
+        <script src="JS/script.js"></script>
     </body>
 </html>
