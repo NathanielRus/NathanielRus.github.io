@@ -4,8 +4,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
 //Validation function
 function validateForm() {
-    let x = document.forms["form-container"]["Name", "Phone#", "Email", "Message"].value;
-    if (x == "") {
+    let q = document.forms["Val"]["Name", "Phone#", "Email", "Message"].value;
+    if (q == "") {
         alert("All fields need to be filled out");
         return false;
     }
