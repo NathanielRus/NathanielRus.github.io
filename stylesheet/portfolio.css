@@ -278,7 +278,7 @@ input[type=submit]:hover {
 /* Form element */
 form { 
     background-color: #789674; 
-    padding: 5px; 
+    padding: 2vw; 
     font-family: "Trebuchet MS", Optima;
 }
 /***** END OF CONTACT FORM STYLING *****/
