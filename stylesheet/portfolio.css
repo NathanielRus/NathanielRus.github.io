@@ -480,3 +480,97 @@ form {
     from {opacity: .4;} 
     to {opacity: 1;} 
 }
+
+
+/*Media rules for paragraph font size for different screen sizes*/
+@media screen and (max-width: 527px) {
+    p {
+        font-size: 3.75vw;
+    }
+}
+
+@media screen and (min-width: 528px) and (max-width: 660px) {
+    p {
+        font-size: 3.5vw;
+    }
+}
+
+@media screen and (min-width: 661px) and (max-width: 799px) {
+    p {
+        font-size: 2.75vw;
+    }
+}
+
+@media screen and (min-width: 800px) and (max-width: 924px) {
+    p {
+        font-size: 2.5vw;
+    }
+}
+
+@media screen and (min-width: 925px) and (max-width: 1050px) {
+    p {
+        font-size: 2.25vw;
+    }
+}
+
+@media screen and (min-width: 1051px) and (max-width: 1310px) {
+    p {
+        font-size: 2vw;
+    } 
+}
+
+@media screen and (min-width: 1311px) and (max-width: 1535px) {
+    p {
+        font-size: 1.75vw;
+    }
+}
+
+@media screen and (min-width: 1536px) and (max-width: 2269px) {
+    p {
+        font-size: 1.5vw;
+    }
+}
+
+@media screen and (min-width: 2270px) {
+    p {
+        font-size: 1.35vw;
+    }
+}
+
+/*Media rule for navbar links for different screen sizes*/
+/* Screens 1080px and smaller will display navbar links equally distributed */
+@media screen and (max-width: 1080px) {
+    .Navbar a{
+        width: 20%; /* This sets each navbar link to 1/5 of the navbar */
+        font-size: 2.5vw;
+    }
+}
+
+/* Media rules to enlarge the font of the white text for smaller screens */
+@media screen and (max-width: 1080px) {
+    .quote{
+        font-size: 3.5vw;
+    }
+
+    .white-text {
+        font-size: 4.5vw;
+    }
+}
+
+/* Media rules to increase the size of the columns for larger screens */
+@media screen and (min-width: 1725px) {
+    .Column_1 {
+        height: 550px;
+    }
+    .Column_2 {
+        height: 550px;
+    }
+}
+
+
+/*Media rule to remove margin-top from h1 elements for extra large screens (so that the paragraph text fits in the column*/
+@media screen and (min-width: 2000px) {
+    h1{
+        margin-top: 0;
+    }
+}
