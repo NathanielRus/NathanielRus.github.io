@@ -237,7 +237,7 @@ footer {
 /***** CONTACT FORM STYLING *****/
 input[type=text] {
     width: 100%; 
-    padding: 12px; 
+    padding: 6vw; 
     border: 1px solid #ccc; 
     border-radius: 4px; 
     box-sizing: border-box; 
