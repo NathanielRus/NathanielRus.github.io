@@ -25,13 +25,6 @@ h1 {
     color: #1a1a1a; 
 }
 
-/* Heading 1 element hover effect */
-h1:hover {
-    filter: grayscale(5%);
-    transform: scale(1.1);
-    transition: transform 1s; 
-}
-
 /* Styling for portfolio title text */
 .white-text {
     color: #fff;
@@ -47,21 +40,9 @@ p {
     padding-right: 20px;
 }
 
-/* Paragraph element hover effect */
-p:hover {
-    transition: transform 1s;
-	transform: scale(1.01); 
-}
-
 /* Center class - this applies to all elements with the class "center" */
 .center {
     text-align: center; 
-}
-
-/* Center class hover effect - This only affects the quote, github link, and footer */
-.center:hover {
-    transition: transform 2s; 
-    transform: scale(1.1); 
 }
 
 /* Anchor elements */
@@ -85,8 +66,13 @@ img {
     margin-right: auto;
 }
 
-/* Image element hover effects */
 img:hover {
+    filter: grayscale(5%);
+    transition: filter 1s;
+}
+
+/* Image element hover effects */
+.img2:hover {
 	filter: grayscale(5%);  
     transition: transform 1s; 
 	transform: scale(1.1); 
@@ -159,7 +145,8 @@ footer {
 .Navbar a:hover {
     background-color: #9fafca; 
     color: black; 
-    font-weight: bold; 
+    font-weight: bold;
+    cursor: pointer;
 }
 
 /* Navbar home button */
@@ -308,27 +295,29 @@ form {
     cursor: pointer;
     opacity: 0.8;
     position: fixed;
-    bottom: 150px;
-    right: 3px;
+    bottom: 7vw;
+    right: .25vw;
     height: 175px;
     width: 25px;
     margin-left: 5px;
     margin-right: 5px;
 }
 
+.open-button {border-radius: 7px;}
+
 .form-popup {
     display: none;
     position: fixed;
-    bottom: 5px;
-    right: 15px;
+    bottom: .25vw;
+    right: .75vw;
     border: 3px solid #817496;
-    z-index: 9;
+    z-index: 100;
 }
 
 .form-container {
-    max-width: 300px;
+    max-width: 20vw;
     padding: 10px;
-    background-color: #364e74;
+    background-color: #789674;
 }
 
 .form-container input[type=text] {
@@ -345,7 +334,7 @@ form {
 }
 
 .form-container .btn {
-    background-color: #53914b;
+    background-color: #4b5291;
     color: white;
     padding: 16px 20px;
     border: none;
@@ -355,9 +344,139 @@ form {
 }
 
 .form-container .btn-close {
-    background-color: #914b4b;
+    background-color: #000000;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.8;
 }
 
 .form-container .btn:hover, .open-button:hover {
-    opacity: 1;
+    color: white;
+    background-color: darkgreen;
+    transition-duration: 1s;
+    -webkit-transition-duration: 1s;
+    border-color: #4b5291;
+}
+
+.form-container .btn-close:hover {
+    color: white;
+    background-color: darkred;
+    transition-duration: 1s;
+    -webkit-transition-duration: 1s;
+    border-color: black;
+}
+
+/* Slide Show */
+
+
+#Slideshow_Background {
+    background: rgba(255, 255, 255, 0.35);     
+}
+
+.mySlides{
+    display: none; 
+}
+
+/* Slideshow section / container */
+#Slideshow_Container {
+    width: 39.5vw; 
+    height: auto; 
+    padding-top: 1%;
+    position: relative;
+    margin: auto; 
+}
+
+/* Remove the underline from the previous and next buttons on the slideshow */
+#Slideshow_Container a {
+    text-decoration: none;
+}
+
+/* Images contained within the slideshow */
+.Slideshow_Images {
+    vertical-align: middle; 
+    height: auto; 
+    box-shadow: 0px 5px 10px 12px rgba(0, 0, 0, .75); 
+    width: 100%; 
+}
+
+/* Next and previous buttons */
+.Previous, .Next {
+    cursor: pointer; 
+    position: absolute; 
+    top: 50%; 
+    width: auto; 
+    padding: 1vw; 
+    color: darkgray; 
+    font-weight: bold;
+    font-size: 1.5vw;
+    border-radius: 0 3px 3px 0; 
+    user-select: none; 
+    transition: 0.6s ease; 
+}
+
+/* Positioning the next button on the right hand side */
+.Next {
+    right: 0; 
+    border-radius: 3px 0 0 3px; 
+}
+
+/* Hover effect on slide show buttons */
+.Previous:hover, .Next:hover {
+    background-color: rgba(0, 0, 0, 0.8); 
+    color: white; 
+}
+
+/* Slideshow text */
+.text {
+    color: white; 
+    padding: 1vw;
+    position: absolute; 
+    bottom: 0; 
+    width: 100%; 
+    text-align: center; 
+    font-family: Perpetua, Rockwell Extra Bold;
+    letter-spacing: .1vw; 
+    font-size: 1.5vw; 
+    background-color: rgba(0, 0, 0, 0.75); 
+    font-weight: bold;
+    border-radius: 0px 0px 7px 7px; 
+}
+
+/* Styling of the dots under the slideshow */
+.dot {
+    cursor: pointer; 
+    height: 1vw; 
+    width: 1vw;
+    margin: .25vw; 
+    background-color: white; 
+    border-radius: 50%; 
+    display: inline-block; 
+    transition: background-color 0.6s ease; 
+    z-index: 1; 
+}
+
+/* Hover effect for slideshow dots */
+.active, .dot:hover {
+    background-color: black; 
+}
+
+/* Fading animation for slideshow */
+.fade {
+    animation-name: fade; 
+    animation-duration: 1.5s; 
+    -webkit-animation-name: fade; 
+    -webkit-animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4;} 
+    to {opacity: 1;} 
+}
+
+@keyframes fade {
+    from {opacity: .4;} 
+    to {opacity: 1;} 
 }

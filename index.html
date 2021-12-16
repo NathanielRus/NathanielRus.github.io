@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Nathaniel Russell</title>
+        <title>Nathaniel R.</title>
         <link rel="shortcut icon" href="Favicon/favicon.ico" type="image/x-icon">
         <link rel="stylesheet" type="text/css" href="stylesheet/portfolio.css">
     </head>
@@ -19,9 +19,10 @@
         <!--Navbar-->
         <div class="Navbar">
             <a class="active" href="#Home">Home</a>
+            <a href="#Slideshow">SlideShow</a>
             <a href="#About">About</a>
             <a href="#GitHub">GitHub</a>
-            <a href="#Contact">Contact</a>
+            <a onclick="openForm()" ondblclick="closeForm()" class="contact">Contact</a>
         </div>
 
         <!--Breaks inserted to add space between navbar and the first heading-->
@@ -39,9 +40,9 @@
 
         <!--Video text-->
         <div class="Video_Text">
-            <h1 class="white-text" style="font-size:2vw;">Nathaniel Russell's Portfolio</h1>
+            <h1 class="white-text" style="font-size:2.5vw;">My Portfolio Site</h1>
             <strong>
-                <p class="center" style="font-size:1vw;">
+                <p class="center" style="font-size:1.5vw;">
                     <q>In some ways, programming is like painting. You start with a blank
                         <br>canvas and certain basic raw materials. You use a combination of
                         <br>science, art, and craft to determine what to do with them.
@@ -55,43 +56,77 @@
             </strong>
         </div>
 
-        <!--Popup Contact-->
-        <button class="open-button" onclick="openForm()">CONTACTME</button>
-        <div class="form-popup" id="popForm">
-            <form action="https://formspree.io/f/mdobnlpr" class="form-container" onsubmit="return validateForm()" method="POST">
-                <h1>Contact Me:</h1>
+        <!-- Slideshow section-->
+        <div id="Slideshow">
+            <div id="Slideshow_Background"> 
+                <div id="Slideshow_Container">
+                    <!-- Slide 1 of 6 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="images/SlideShow/IMG_1.jpg">
+                        <div class="text">I'm available to assist you on your project!</div>
+                    </div>
+                    <!-- Slide 2 of 6 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="images/SlideShow/HTML_CSS_and_JavaScript.jpeg"> 
+                        <div class="text">I am a full-stack software developer,<br> trained in:<br>HTML, CSS, and JavaScript.</div>
+                    </div>
+                    <!-- Slide 3 of 6 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="images/SlideShow/IMG_2.jpg">
+                        <div class="text">I will be learning:<br>SQL, C#, and C++ in the future.</div>
+                    </div>
+                    <!-- Previous and next buttons -->
+                    <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="Next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+                <br>
 
-                <label>Name:</label>
-                    <input type="text" id="Name" name="Name" placeholder="Please enter your name here">
-                <label>Phone #:</label>
-                    <input type="text" id="Phone#" name="Phone#" placeholder="Please enter your phone number here">
-                <label>Email:</label>
-                    <input type="text" id="Email" name="Email" placeholder="Please enter your email here">
-                <label>Message:</label>
-                    <input type="text" id="Message" name="Message" placeholder="Please write your message here">
-
-                <button type="submit" class="btn">Sumbit</button>
-                <button type="button" class="btn-close" onclick="closeForm()">Close</button>
-            </form>
+                <!-- Slideshow dots -->
+                <div style="text-align: center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
+            </div>
         </div>
+
+        <!--Popup Contact-->
+            <button class="open-button" onclick="openForm()">CONTACT<br><br>ME</button>
+            <div class="form-popup" id="popForm">
+                <form action="https://formspree.io/f/mdobnlpr" class="form-container" onsubmit="return validateForm()" method="POST">
+                    <h1 style="font-size:2vw;">Contact Me:</h1>
+
+                    <label style="font-size:1vw;">Name:</label>
+                        <input type="text" id="Name" name="Name" placeholder="Please enter your name here">
+                    <label style="font-size:1vw;">Phone #:</label>
+                        <input type="text" id="Phone#" name="Phone#" placeholder="Please enter your phone number here">
+                    <label style="font-size:1vw;">Email:</label>
+                        <input type="text" id="Email" name="Email" placeholder="Please enter your email here">
+                    <label style="font-size:1vw;">Message:</label>
+                        <input type="text" id="Message" name="Message" placeholder="Please write your message here">
+
+                    <button type="submit" class="btn">Sumbit</button>
+                    <button type="button" class="btn-close" onclick="closeForm()">Close</button>
+                </form>
+            </div>
 
         <!--About section-->
         <div class="Row" id="About">
             <!--Left column-->
             <div class="Column_2">
-                <img src="./images/gamek.jpg" alt=" Gaming Keyboard">
+                <img src="./images/gamek.jpg" class="img2" alt=" Gaming Keyboard">
             </div>
             <!--Right column-->
             <div class="Column_1">
-                <h1>About:</h1>
-                <p>
+                <h1 style="font-size:2vw;">About:</h1>
+                <p style="font-size:1.25vw;">
                     I am learning to be a game developer. I am 26 and have always dreamed of coding. I have put my dreams into action by working through this boot camp! I was working at the Transportion Security Administration for almost 5 years. I then decided that I wanted to pursue a programming career.
                     <br>I am a student of <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a>’s Game Developer Boot Camp. I am trained in the following web and programming languages: HTML, CSS and JavaScript. 
                     <br>
                     <br>I will be learning: SQL, C#, and C++.
                     <br>I will also be learning Game Development in Unity and Unreal.
                     <br>
-                    <br>I am a full-stack developer and would love to work with you on your project. <a href="#Contact">Contact</a> me below!
+                    <br>I am a full-stack developer and would love to work with you on your project.
                 </p>
             </div>
         </div>
@@ -100,52 +135,29 @@
         <div class="Row" id="GitHub">
             <!--Left column-->
             <div class="Column_1">
-                <h1>GitHub:</h1>
-                <p>
+                <h1 style="font-size:2vw;">GitHub:</h1>
+                <p style="font-size:1.25vw;">
                     You can view my coding projects on my GitHub profile here:
                     <br>
-                    <p class="center"><a href="https://github.com/NathanielRus" target="_blank">My Github!</a></p>
+                    <p class="center" style="font-size:1.25vw;"><a href="https://github.com/NathanielRus" target="_blank">My Github!</a></p>
                     <br>
-                    <p>My GitHub is constantly updating with new projects!</p>
+                    <p style="font-size:1.25vw;">My GitHub is constantly updating with new projects!</p>
                 </p>
             </div>
             <!--Right column-->
             <div class="Column_2">
-                <a href="https://github.com/NathanielRus" target="_blank"><img src="images/GitHub.png" alt="GitHub Logo"></a>
-            </div>
-        </div>
-
-        <!--Contact section-->
-        <div class="Row">
-            <!--Contact image, left column-->
-            <div class="Column_2">
-                <img src="./images/email.jpg" alt="Contact_Email">
-            </div>
-            <!--Contact form, right column-->
-            <div class="Column_1 Column_tall">
-                <h1>Contact Me:</h1>
-                <!--This specifies where and how to send the form data-->
-                <form name="contactForm" action="https://formspree.io/f/mdobnlpr" onsubmit="return validateForm()" method="POST">
-                    <label>Name:</label>
-                        <input type="text" id="Name" name="Name" placeholder="Please enter your name here">
-                    <label>Phone #:</label>
-                        <input type="text" id="Phone#" name="Phone#" placeholder="Please enter your phone number here">
-                    <label>Email:</label>
-                        <input type="text" id="Email" name="Email" placeholder="Please enter your email here">
-                    <label>Message:</label>
-                        <input type="text" id="Message" name="Message" placeholder="Please write your message here">
-                        <input type="submit" value="SUBMIT">
-                </form>
+                <a href="https://github.com/NathanielRus" target="_blank"><img src="images/GitHub.png" class="img2" alt="GitHub Logo"></a>
             </div>
         </div>
 
         <!--Footer section-->
-        <footer id="Contact">
+        <footer>
             <p>
-                <p class="center">If you would like to learn coding also. Let me refer you to.<a href="https://www.learncodinganywhere.com/" target="_blank"> The Tech Academy</a></p>
+                <p class="center" style="font-size:1.25vw;">If you would like to learn coding also. Let me refer you to.<a href="https://www.learncodinganywhere.com/" target="_blank"> The Tech Academy</a></p>
                 <br>
             </p>
         </footer>
         <script src="JS/script.js"></script>
     </body>
+    <script>'undefined'=== typeof _trfq || (window._trfq = []);'undefined'=== typeof _trfd && (window._trfd=[]),_trfd.push({'tccl.baseHost':'secureserver.net'}),_trfd.push({'ap':'cpsh'},{'server':'a2plcpnl0622'})</script><script src='https://img1.wsimg.com/tcc/tcc_l.combined.1.0.6.min.js'></script>
 </html>
