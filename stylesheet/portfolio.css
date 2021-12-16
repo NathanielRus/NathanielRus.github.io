@@ -316,13 +316,13 @@ form {
 
 .form-container {
     max-width: 20vw;
-    padding: 1vw;
+    padding: .75vw;
     background-color: #789674;
 }
 
 .form-container input[type=text] {
     width: 100%;
-    padding: 15px;
+    padding: .75vw;
     margin: 5px 0 22px 0;
     border: none;
     background: #f1f1f1;
@@ -336,7 +336,7 @@ form {
 .form-container .btn {
     background-color: #4b5291;
     color: white;
-    padding: 16px 20px;
+    padding: .75vw 1vw;
     border: none;
     cursor: pointer;
     width: 100%;
