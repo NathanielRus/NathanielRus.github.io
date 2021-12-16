@@ -346,7 +346,7 @@ form {
 .form-container .btn-close {
     background-color: #000000;
     color: white;
-    padding: 16px 20px;
+    padding: .75vw 1vw;
     border: none;
     cursor: pointer;
     width: 100%;
