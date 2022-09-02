@@ -42,7 +42,8 @@ p {
 
 /* Center class - this applies to all elements with the class "center" */
 .center {
-    text-align: center; 
+    text-align: center;
+    video-align: center;
 }
 
 /* Anchor elements */
