@@ -214,7 +214,7 @@ footer {
 .Column_2 {
     float: left;
     width: 50%;
-    padding: 150px;
+    padding: 250px;
     padding-top: 0;
     height: 500px;
     background-color: #364e74;
@@ -222,7 +222,7 @@ footer {
 
 /* This class is applied to the columns in the final row, overriding the height and padding to provide more room for the contact form  while keeping the rest of the formatting from Column_1 or Column_2 */
 .Column_tall {
-    padding-top: 10;
+    padding-top: 30;
     height: 500px;
 }
 
