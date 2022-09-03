@@ -224,6 +224,8 @@ footer {
 .Column_tall {
     padding-top: 3%;
     height: 500px;
+    height: 500px;
+    background-color: #364e74;
 }
 
 /* This inserts something after the content of selected elements (in this case the elements with class "Row") */
