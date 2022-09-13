@@ -165,6 +165,10 @@ footer {
     z-index: -1; 
 }
 
+#V_Design {
+    width: 50%;
+}
+
 /* Screens that are 576px and smaller will not display the background video */
 @media screen and (max-width: 576px) {
     #Game_Video {
