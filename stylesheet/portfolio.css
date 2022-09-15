@@ -166,7 +166,9 @@ footer {
 }
 
 #V_Design {
-    width: 50%;
+    width: 60%;
+    padding: 20px;
+    height: 480px;
 }
 
 /* Screens that are 576px and smaller will not display the background video */
